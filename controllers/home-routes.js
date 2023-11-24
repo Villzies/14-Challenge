@@ -1,9 +1,21 @@
 const router = require("express").Router();
 require("dotenv").config();
 const withAuth = require("../utils/auth");
-  
+
+const apiKey = process.env.API_KEY;
+
+async function fetchAndDisplayArticles() {
+  const url = `https://app.ticketmaster.com/discovery/v2/venues.json?apikey=${apiKey}`;
+
+  const response = await fetch(url);
+  const data = await response.json();
+  //console.log(data);
+  return data._embedded.venues;
+}
+
 router.get("/", withAuth, async (req, res) => {
     try {
+      const result = await fetchAndDisplayArticles();
       res.render("homepage", { result, logged_in: req.session.logged_in });
     } catch (err) {
       res.status(500).json(err);

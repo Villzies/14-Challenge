@@ -3,6 +3,7 @@ require('dotenv').config();
 
 let sequelize;
 
+//JAWSDB Plugin for Heroku
 if (process.env.JAWSDB_URL) {
     sequelize = new Sequelize(process.env.JAWSDB_URL);
     } else {
@@ -11,7 +12,7 @@ if (process.env.JAWSDB_URL) {
         process.env.DB_USER,
         process.env.DB_PASSWORD,
         {
-        host: "127.0.0.1", // <------ Change this to localhost if you do not need to specifically list your local ip.
+        host: "localhost",
         dialect: "mysql",
         port: 3306,
         }

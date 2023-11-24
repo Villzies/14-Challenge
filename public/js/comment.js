@@ -1,8 +1,3 @@
-const venue_id = document.querySelector('input[name="post-id"]').value;
-
-console.log("testing");
-console.log(venue_id);
-
 const commentFormHandler = async (event) => {
   event.preventDefault();
 

@@ -1,3 +1,7 @@
+const router = require("express").Router();
+const withAuth = require("../utils/auth");
+require("dotenv").config();
+
 router.get("/", withAuth, async (req, res) => {
     try {
       const result = await fetchAndDisplayArticles();

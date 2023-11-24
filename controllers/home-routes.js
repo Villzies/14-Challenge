@@ -30,3 +30,5 @@ router.get("/", withAuth, async (req, res) => {
   
     res.render("signup");
   });
+
+  module.exports = router;

@@ -11,5 +11,6 @@ const logout = async () => {
     }
   };
   
+  //Listens for a click on logout in the navbar
   document.querySelector('#logout').addEventListener('click', logout);
   document.querySelector('#logout2').addEventListener('click', logout);

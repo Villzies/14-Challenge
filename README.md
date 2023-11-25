@@ -14,7 +14,7 @@ Note: This project utilizies code that I adapted from another project I worked o
 
 ## Deployment
 
-Visit our deployed website at (placeholder)
+Visit our deployed website at https://tech-spot-blog-z-5c4b0694cac5.herokuapp.com/
 
 ## Usage
 
